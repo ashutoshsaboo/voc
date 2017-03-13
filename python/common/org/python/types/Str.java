@@ -764,7 +764,17 @@ public class Str extends org.python.types.Object {
             __doc__ = ""
     )
     public org.python.Object isnumeric() {
-        throw new org.python.exceptions.NotImplementedError("isnumeric() has not been implemented.");
+        int c = 0;
+        java.lang.String checkString = this.value;
+        char currentCharacter;
+        while (c < (checkString.length()-1)) {
+            currentCharacter = checkString.charAt(c);
+            if (!Character.isDigit(currentCharacter)) {
+                return new org.python.types.Bool(false);
+            }
+            c++;
+        }
+        return new org.python.types.Bool(true);
     }
 
     @org.python.Method(
