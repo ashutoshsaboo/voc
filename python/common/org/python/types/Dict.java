@@ -350,7 +350,7 @@ public class Dict extends org.python.types.Object {
     @org.python.Method(
             __doc__ = ""
     )
-    public org.python.types.Dict copy() {
+    public org.python.Object copy() {
         org.python.types.Dict otherDict = (org.python.types.Dict) this;
         return otherDict;
     }
