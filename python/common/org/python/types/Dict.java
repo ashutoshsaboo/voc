@@ -350,8 +350,9 @@ public class Dict extends org.python.types.Object {
     @org.python.Method(
             __doc__ = ""
     )
-    public org.python.Object copy() {
-        throw new org.python.exceptions.NotImplementedError("dict.copy() has not been implemented.");
+    public org.python.types.Dict copy() {
+        org.python.types.Dict otherDict = (org.python.types.Dict) this;
+        return otherDict;
     }
 
     @org.python.Method(

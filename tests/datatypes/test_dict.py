@@ -20,6 +20,12 @@ class DictTests(TranspileTestCase):
                 print(err)
             """)
 
+    def test_copy(self):
+        self.assertCodeExecution("""
+            x = {'a': 1, 'b': 2, 'c': 3}
+            print(x.copy())
+            """)
+
     def test_creation(self):
         # Empty dict
         self.assertCodeExecution("""
