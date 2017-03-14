@@ -26,7 +26,7 @@ class StrTests(TranspileTestCase):
 
     def test_isnumeric(self):
         self.assertCodeExecution("""
-            for s in [u'112358132134', u'3.14159', u'12312344df', '', 'this2009', '23443434']:
+            for s in [u'112358132134', u'3.14159', u'12312344df', '', 'this2009', '23443434', '3.14']:
                 print(s.isnumeric())
             """)
 
