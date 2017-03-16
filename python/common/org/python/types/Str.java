@@ -767,6 +767,9 @@ public class Str extends org.python.types.Object {
         int c = 0;
         java.lang.String checkString = this.value;
         char currentCharacter;
+        if (checkString.length() == 0) {
+            return new org.python.types.Bool(false);
+        }
         while (c < (checkString.length())) {
             currentCharacter = checkString.charAt(c);
             if (!Character.isDigit(currentCharacter)) {
