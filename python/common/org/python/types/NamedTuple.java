@@ -53,6 +53,14 @@ public class NamedTuple extends org.python.types.Object {
         }
 
     }
+
+    @org.python.Method(
+            __doc__ = ""
+    )
+    public org.python.types.Str __repr__() {
+        // Representation of an empty set is different
+        return new org.python.types.Str("<class '__main__." + this.typeName + "'>");
+    }
 }
 
     // @org.python.Method(
